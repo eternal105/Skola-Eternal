@@ -22,7 +22,7 @@ public class Glavna {
 		Student[] studenti = UnesiStudente(s, predmeti);
 		Ispit[] ispitniRokovi = UnesiIspiteRokove(s, predmeti, studenti);
 		
-		IspisiOdlcneStudente(ispitniRokovi);
+		IspisiOdlicneStudente(ispitniRokovi);
 		
 		s.close();
 		System.out.println("PROGRAM ZAUSTAVLJEN");
@@ -182,7 +182,7 @@ public class Glavna {
 		return ispiti;
 	}
 
-	private static void IspisiOdlcneStudente(Ispit[] ispitniRokovi) {
+	private static void IspisiOdlicneStudente(Ispit[] ispitniRokovi) {
 		for (Ispit ispit : ispitniRokovi) {
 			Student s = ispit.getStudent();
 			String np = ispit.getPredmet().getNaziv();
